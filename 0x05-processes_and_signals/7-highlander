@@ -4,9 +4,9 @@
 # Trap SIGTERM and print message immediately
 trap 'printf "I am invincible!!!\n"' SIGTERM
 
+# Infinite loop
 while true
 do
-    printf "I am invicible!!!\n"
+    printf "To infinity and beyond\n"
     sleep 2
 done
-
