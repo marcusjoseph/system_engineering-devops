@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# This script displays the PID and process name of all processes containing "bash"
+# Display PID and process name for processes containing "bash" on Windows
 
-# List all PIDs and process names for processes matching "bash"
-pgrep -a bash | awk '{print $1, $2}'
+tasklist | grep -i bash | while read -r line; do
+    pname=$(echo "$line" | awk '{print $1}')
+    pid=$(echo "$line" | awk '{print $2}')
+    echo "$pid $pname"
+done
