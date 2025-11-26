@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
-# Sends SIGTERM to the 7-highlander process without using kill or killall
+# Infinite loop script that prints a message and handles SIGTERM
 
-pkill -f 7-highlander
+trap 'echo "I am invincible!!!"' SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
