@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 # Infinite loop script that prints a message and handles SIGTERM
 
-trap 'echo "I am invincible!!!"' SIGTERM
+# Trap SIGTERM and print message immediately
+trap 'echo "I am invincible!!!" >&2' SIGTERM
 
 while true
 do
     echo "To infinity and beyond"
     sleep 2
 done
+
