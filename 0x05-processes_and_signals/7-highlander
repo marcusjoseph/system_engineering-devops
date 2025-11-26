@@ -2,11 +2,11 @@
 # Infinite loop script that prints a message and handles SIGTERM
 
 # Trap SIGTERM and print message immediately
-trap 'echo "I am invincible!!!" >&2' SIGTERM
+trap 'printf "I am invincible!!!\n"' SIGTERM
 
 while true
 do
-    echo "To infinity and beyond"
+    printf "To infinity and beyond\n"
     sleep 2
 done
 
